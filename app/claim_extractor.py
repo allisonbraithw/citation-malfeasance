@@ -47,7 +47,6 @@ class ClaimExtractor:
     for index, page in enumerate(pdf_reader.pages):
       parts.append(f"--- PAGE {index} ---")
       parts.append(page.extract_text())
-    print(parts)
     return parts
 
   def extract_claims(self, pdf_path: str) -> str:
